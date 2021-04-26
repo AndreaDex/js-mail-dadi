@@ -4,34 +4,13 @@ console.log(usersMail);
 
 //chiedere indirizzo mail all'utente
 var inputMail = prompt("Per favore inserisci la tua mail");
-var result = document.getElementById("result"); 
+
 // verifica mail e comunicazione risultato
-switch (inputMail) {
 
-    case "lamiamail@mail.it" :
-        document.getElementById("result").innerHTML = "Congratulazioni, puoi accedere alla classe"
-        break;
-        
-    case "latuamail@mail.it" :
-         result.innerHTML = "Congratulazioni, puoi accedere alla classe"
-         break;   
-    
-    case "lasuamail@mail.it" :  
-         result.innerHTML = "Congratulazioni, puoi accedere alla classe"
-         break;   
-
-     case "lanostramail@mail.it" :  
-         result.innerHTML = "Congratulazioni, puoi accedere alla classe"
-         break;  
-
-    case "lavostramail@mail.it" :  
-         result.innerHTML = "Congratulazioni, puoi accedere alla classe"
-         break;   
-
-    case "laloromail@mail.it" :  
-         result.innerHTML = "Congratulazioni, puoi accedere alla classe"
-         break;   
-
-    default:
-        result.innerHTML = "Mi dispiace ma non hai i requisiti necessari per accedere";
+for (i = 0; i < usersMail.length; i++) {
+     if (usersMail[i] == inputMail ){
+          document.getElementById("result").innerHTML = "congratulazioni, puoi accedere alla classe"
+     } else {
+          document.getElementById("result").innerHTML = "mi dispiace ma non i requisiti per accedere"
+     }
 }
