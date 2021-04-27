@@ -4,13 +4,17 @@ console.log(usersMail);
 
 //chiedere indirizzo mail all'utente
 var inputMail = prompt("Per favore inserisci la tua mail");
-
+var verified = false;
 // verifica mail e comunicazione risultato
 
-for (i = 0; i < usersMail.length; i++) {
+for (var i = 0; i < usersMail.length; i++) {
      if (usersMail[i] == inputMail ){
-          document.getElementById("result").innerHTML = "congratulazioni, puoi accedere alla classe"
-     } else {
-          document.getElementById("result").innerHTML = "mi dispiace ma non i requisiti per accedere"
+          verified = true
      }
+};
+
+if (verified) {
+     document.getElementById("result").innerHTML = "Congratulazioni, puoi accedere alla classe."
+} else {
+     document.getElementById("result").innerHTML = "Mi dispiace, non hai i requisiti necessari per accedere."
 }
